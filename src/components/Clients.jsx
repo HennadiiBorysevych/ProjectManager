@@ -4,6 +4,7 @@ import { GET_CLIENTS } from "../queries/ClientsQuery";
 import ClientRow from "./ClientRow";
 import Spinner from "./Spinner";
 export const Clients = () => {
+  
   const { data, loading, error } = useQuery(GET_CLIENTS);
 
   if (loading) {
@@ -12,6 +13,7 @@ export const Clients = () => {
   if (error) {
     return <p>Something went wrong</p>;
   }
+
 
   return (
     <div>
