@@ -7,7 +7,7 @@ export const ADD_PROJECT = gql`
     $clientId: ID!
     $status: ProjectStatus!
   ) {
-    AddProject(
+    addProject(
       name: $name
       description: $description
       status: $status

@@ -14,6 +14,7 @@ const AddProjectModal = () => {
   const [clientId, setClientId] = useState("");
 
   const { loading, data, error } = useQuery(GET_CLIENTS);
+
   const [addProject] = useMutation(ADD_PROJECT, {
     variables: { name, description, status, clientId },
     update(cache, { data: { addProject } }) {
@@ -73,7 +74,7 @@ const AddProjectModal = () => {
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="addProjectModalLabel">
-                    Add client
+                    Add Project
                   </h5>
                   <button
                     type="button"
